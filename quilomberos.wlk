@@ -1,6 +1,9 @@
 import cuidadores.*
 import casa.*
 
+//la interfaz del quilombero está definida por hacerQuilomboi(unaCasa) y 
+//velocidad()
+
 object jerry{
     var peso = 2
 

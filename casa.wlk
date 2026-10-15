@@ -1,6 +1,13 @@
 import cuidadores.*
 import quilomberos.*
 
+//la interfaz de casa está definida por los metodos ensuciar(cantidad), pasarDia()
+//pasarNoche(), serLimpiada(cantidad), limpiarTotalmente(), quilombero() y cuidador() 
+
+//ademas, casa aprovecha el polimorfismo al interactuar con cualquier cuidador o quilombero 
+//sin importar quien sea (tom, robocat, jerry, pandilla, ninguno) ya que les envia los 
+//mismos mensajes (limpiar, dormir, hacerQuilombo, etc) tratandolos de forma indistinta
+
 object casa{
     var cuidador = tom
     var quilombero = ningunQuilombero

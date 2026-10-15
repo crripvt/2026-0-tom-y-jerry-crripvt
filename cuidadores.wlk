@@ -1,6 +1,10 @@
 import casa.*
 import quilomberos.*
 
+//la interfaz de ciudador está definida por los metodos limpiar(), puedeAtrapar()
+// interrumpirSueño(), dormir(){} y en mi caso perderEnergia(valor) ya que lo use 
+//para speedy gonzales
+
 object tom{
     var energia = 25
     method energia()=energia 
