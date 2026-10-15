@@ -1,0 +1,42 @@
+import casa.*
+import quilomberos.*
+import cuidadores.*
+
+
+
+describe "tests para cuidadores" {
+
+  test "tom no puede atrapar a jerry" {
+    casa.quilombero(jerry)
+    casa.cuidador(tom)
+    assert.notThat(tom.puedeAtrapar(jerry))
+  }
+
+  test "robocat deja la casa limpia" {
+    casa.cuidador(robocat)
+    casa.suciedad(150)
+    robocat.limpiar(casa)
+    assert.equals(0, casa.suciedad())
+  }
+
+}
+
+describe "tests para quilomberos" {
+
+  test "la velocidad de la pandilla es la mitad del miembro mas lento" {
+    pandilla.agregar(jerry)
+    pandilla.agregar(tuffy)
+    pandilla.agregar(speedyGonzales)
+
+    casa.quilombero(pandilla)
+
+    assert.equals(4, pandilla.velocidad())
+  }
+
+  test "si no hay quilomberos no se ensucia la casa cuando hay quilombo" {
+    casa.suciedad(0)
+    ningunQuilombero.hacerQuilombo(casa)
+    assert.equals(0,casa.suciedad())
+  }
+
+}
